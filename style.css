@@ -1,0 +1,21 @@
+.topnav{
+  font-family: monospace;
+  background-color: white;
+  overflow: hidden;
+  padding: 14px 20px;
+}
+
+.topnav a{
+  font-family: monospace;
+  float: left;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 10px;
+}
+.topnav a:hover{
+  background-color: #ddd;
+  color: black;
+}
