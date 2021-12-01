@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
     <title> Uber vs. Yellow Cabs</title>
     <link rel="stylesheet" type = "text/css" href="style.css">
     <link rel="icon" type="image/png" href="yellow_cab.png">
@@ -10,16 +9,87 @@
     <center>
       <h1>Should Uber be capped in NYC?</h1>
     </center>
-
-    <div class="topnav">
-      <a class="active" href="#main">Main</a>
-      <a href="#ridership">Ridership</a>
-      <a href="#fares">Fares</a>
-      <a href="#codes">Raw Codes & Data</a>
-      <a href="#resources">Resources</a>
+    <div class="tab">
+      <button class="tablink" onclick="openPage('intro', this)" id="defaultOpen">Introduction & Video</button>
+      <button class="tablink" onclick="openPage('analysis', this)">Ridership & Fares</button>
+      <button class="tablink" onclick="openPage('code', this)">Codes & Raw Data</button>
+      <button class="tablink" onclick="openPage('resources', this)">Resources</button>
     </div>
 
-    <h3>Abstract</h3>
-    <p>Uber has recently driven the once-solid yellow cab industry into bankruptcy.  I intend on taking a deep-dive into the available data to analyze and visualize Uber’s rapid increase in rides, the yellow cab’s rapid decrease in rides, and compare Uber's and the yellow taxi’s fares/fees (not part of the data analysis but important to discuss).</p>
+    <div id="intro" class="tabcontent">
+        <br>
+        <br>
+      <!-- Embed trailer video -->
+      <!-- <table style="width:100%">  -->
+        <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/duTNQE0NnlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <br>
+        <br>
+        <h2><strong>Abstract</strong></h2>
+        <p>Uber has recently driven the once-solid yellow cab industry into bankruptcy.
+          I intend on taking a deep-dive into the available data to analyze and visualize Uber’s rapid increase in rides,
+          the yellow cab’s rapid decrease in rides, and compare Uber's and the yellow taxi’s fares/fees.
+          </p>
+          <br>
+          <br>
+      </div>
+<!-- Movie number 2 -->
+    <div id="analysis" class="tabcontent">
+      <h2>Ridership</h2><br>
+        <table style="width:50%" border=2px>
+          <tr>
+            <th>TESTING</th>
+            <th>TESTING</th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>TESTING</td>
+              <td>TESTING</td>
+            </tr>
+            <tr>
+              <td>TESTING</td>
+              <td>TESTING</td>
+            </tr>
+            <tr>
+              <td>TESTING</td>
+              <td>TESTING</td>
+            </tr>
+            <tr>
+              <td>TESTING</td>
+              <td>TESTING</td>
+            </tr>
+            <tr>
+              <td>TESTING</td>
+              <td>TESTING</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+<!-- Movie # 3 -->
+    <div id="code" class="tabcontent">
+      <code class="codeblock">
+        CODE CODE CODE
+        TESTING TESTING TESTING
+      </code>
+    </div>
+<!-- My resources page -->
+    <div id="resources" class="tabcontent">
+      <h3>Resources</h3>
+      <p>Thank you to NYC Open Data for their content.</p>
+    </div>
+
+
+    <script> function openPage(pageName, elmnt) {
+      // Hide all elements with class="tabcontent" by default
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      // Show the specific tab content
+      document.getElementById(pageName).style.display = "block";
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
