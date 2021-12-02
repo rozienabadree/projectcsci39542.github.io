@@ -66,9 +66,16 @@
     </div>
 <!-- page # 3 -->
     <div id="code" class="tabcontent">
+      <p>
+        <a name = "p1"> Using the </a>
+        <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/f0b6026c17d090ba2f385573b43da46ccf0017b6/uber_Data.csv" >uber_Data.csv</a>
+           file, Uber had a total of 753,714,454 from 2015 to present date.
+      </p>
       <code class="codeblock">
-        CODE CODE CODE
-        TESTING TESTING TESTING
+        df = pd.read_csv('uber_Data.csv') <br>
+        df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(float) <br>
+        total = df['Total Dispatched Trips'].sum() <br>
+        print(total)
       </code>
     </div>
 <!-- My resources page -->
