@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title> Uber vs. Yellow Cabs</title>
+    <title> Uber vs. NYC</title>
     <link rel="stylesheet" type = "text/css" href="style.css">
     <link rel="icon" type="image/png" href="yellow_cab.png">
   </head>
@@ -76,11 +76,59 @@
            file, Uber had a total of 753,714,454 from 2015 to present date.
       </p>
       <code class="codeblock">
+        <br>
         df = pd.read_csv('uber_Data.csv') <br>
         df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(float) <br>
         total = df['Total Dispatched Trips'].sum() <br>
-        print(total)
+        print(total) <br>
+        <br>
       </code>
+      <br>
+      <p>
+        <a name = "p1"> A second and more comprehensive analysis was done using the </a>
+        <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/1539353e2c195af278d8d560b46bfa4278c4e538/FHV_Base_Aggregate_Report.csv" >FHV_Base_Aggregate_Report.csv</a>
+           file, which is a tally of all taxi rides in NYC between 2015 and November 2021.
+           Data from this file, produced the the first <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/b65dd8a9a8a978bb7f94cd73fbc1985fcce3b557/aggregate_analysis.csv">pivot table</a> and graph below (Uber vs NYC Rides).
+      </p>
+      <code class="codeblock">
+        <br>
+        #Read the CSV into a dataframe. <br>
+        df = pd.read_csv('FHV_Base_Aggregate_Report.csv') <br><br>
+
+        #Change the case for the `Base Name` column. <br>
+        df['Base Name']= df['Base Name'].str.upper().str.title() <br><br>
+
+        #Convert each value in the `Total Dispatched Trips` column to integers. <br>
+        df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(int) <br>
+        pivot = pd.pivot_table(df, index = 'Base Name',
+                                         columns = 'Year',
+                                         values = 'Total Dispatched Trips',
+                                         aggfunc = 'sum',
+                                         fill_value = 0,
+                                         margins = True,
+                                         margins_name = 'Total').sort_values('Total',
+                                                                             ascending=False) <br><br>
+
+        #Save the data to a CSV file. <br>
+        pivot.to_csv('aggregate_analysis.csv') <br><br>
+
+        #Working with the same pivot table, view the top 3 companies against the total # of rides. <br>
+        top_cabs = pivot.head(4) <br>
+        top_cabs = top_cabs.drop(columns='Total') <br>
+        top_cabs = top_cabs.drop('Total') <br>
+        print(top_cabs) <br><br>
+
+        #Graph, save, and show the data. <br>
+        ax = top_cabs.plot(kind='barh', title='Uber vs NYC Rides\n2015-2021') <br>
+        ax.invert_yaxis() <br>
+        ax.set(xlabel='# of rides in hundred millions', ylabel='base name') <br>
+        fig = plt.gcf() <br>
+        fig.savefig('uber.png') <br>
+        plt.show() <br><br>
+      </code>
+      <img src="uber.png" alt="Uber vs NYC Rides 2015-2021">
+
+
       <h2>More to come...</h2>
     </div>
 <!-- My resources page -->
