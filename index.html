@@ -4,6 +4,12 @@
     <title> Uber vs. NYC</title>
     <link rel="stylesheet" type = "text/css" href="style.css">
     <link rel="icon" type="image/png" href="yellow_cab.png">
+    <style>
+    .tabcode {
+        display: inline-block;
+        margin-left: 160px;
+    }
+    </style>
   </head>
   <body>
     <center>
@@ -40,30 +46,42 @@
       <h2>Ridership</h2><br>
         <table style="width:50%" border=2px>
           <tr>
-            <th>TESTING</th>
-            <th>TESTING</th>
+            <th>TYPE</th>
+            <th>DESCRIPTION</th>
+            <th>BASE FARE</th>
+            <th>FINANCIAL BREAKDOWN</th>
+            <th>MINIMUM FARE</th>
           </tr>
           <tbody>
             <tr>
-              <td>TESTING</td>
-              <td>TESTING</td>
+              <td>UberX</td>
+              <td>regular/professional drivers; regular cars</td>
+              <td>$2.55</td>
+              <td>$0.35 per minute + $1.75 per mile</td>
+              <td>$7.00</td>
             </tr>
             <tr>
-              <td>TESTING</td>
-              <td>TESTING</td>
+              <td>uberXL</td>
+              <td>regular/professional drivers; regular SUVs</td>
+              <td>$3.85</td>
+              <td>$0.50 per minute + $2.85 per mile</td>
+              <td>$10.50</td>
             </tr>
             <tr>
-              <td>TESTING</td>
-              <td>TESTING</td>
+              <td>UberBLACK</td>
+              <td>professional drivers; upscale cars</td>
+              <td>$7.00</td>
+              <td>$0.65 per minute + $3.75 per mile</td>
+              <td>$15.00</td>
             </tr>
             <tr>
-              <td>TESTING</td>
-              <td>TESTING</td>
+              <td>UberSUV</td>
+              <td>professional drivers; upscale SUVs</td>
+              <td>$14.00</td>
+              <td>$0.65 per minute + $3.75 per mile</td>
+              <td>$25.00</td>
             </tr>
             <tr>
-              <td>TESTING</td>
-              <td>TESTING</td>
-            </tr>
           </tbody>
         </table>
         <h2>More to come</h2>
@@ -92,6 +110,10 @@
       </p>
       <code class="codeblock">
         <br>
+        import matplotlib.pyplot as plt <br>
+        from matplotlib import ticker <br>
+        import pandas as pd <br><br>
+
         #Read the CSV into a dataframe. <br>
         df = pd.read_csv('FHV_Base_Aggregate_Report.csv') <br><br>
 
@@ -100,14 +122,13 @@
 
         #Convert each value in the `Total Dispatched Trips` column to integers. <br>
         df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(int) <br>
-        pivot = pd.pivot_table(df, index = 'Base Name',
-                                         columns = 'Year',
-                                         values = 'Total Dispatched Trips',
-                                         aggfunc = 'sum',
-                                         fill_value = 0,
-                                         margins = True,
-                                         margins_name = 'Total').sort_values('Total',
-                                                                             ascending=False) <br><br>
+        pivot = pd.pivot_table(df, index = 'Base Name', <br><span class="tabcode"></span>
+                                         columns = 'Year', <br><span class="tabcode"></span>
+                                         values = 'Total Dispatched Trips', <br><span class="tabcode"></span>
+                                         aggfunc = 'sum', <br><span class="tabcode"></span>
+                                         fill_value = 0, <br><span class="tabcode"></span>
+                                         margins = True, <br><span class="tabcode"></span>
+                                         margins_name = 'Total').sort_values('Total', ascending=False) <br><br>
 
         #Save the data to a CSV file. <br>
         pivot.to_csv('aggregate_analysis.csv') <br><br>
@@ -115,8 +136,7 @@
         #Working with the same pivot table, view the top 3 companies against the total # of rides. <br>
         top_cabs = pivot.head(4) <br>
         top_cabs = top_cabs.drop(columns='Total') <br>
-        top_cabs = top_cabs.drop('Total') <br>
-        print(top_cabs) <br><br>
+        top_cabs = top_cabs.drop('Total') <br><br>
 
         #Graph, save, and show the data. <br>
         ax = top_cabs.plot(kind='barh', title='Uber vs NYC Rides\n2015-2021') <br>
@@ -134,7 +154,13 @@
 <!-- My resources page -->
     <div id="resources" class="tabcontent">
       <h3>Resources</h3>
-      <p>Thank you to NYC Open Data for their content.</p>
+      <p>Thank you to NYC Open Data for their content. </p>
+      <ul>
+        <li>This <a href = "https://data.cityofnewyork.us/Transportation/uber-Data/3jeu-mn7j">file</a> was used for the first analysis.</li>
+        <li>This <a href = "https://data.cityofnewyork.us/Transportation/FHV-Base-Aggregate-Report/2v9c-2k7f">file</a> was used for the second analysis and first graph.</li>
+      </ul>
+      <p>Thank you to <a href = "https://github.com/fivethirtyeight/uber-tlc-foil-response">FiveThirtyEight</a> for wrangling information from Uber. </p>
+      <p>Thank you to <a href = "https://www.investopedia.com/articles/personal-finance/021015/uber-versus-yellow-cabs-new-york-city.asp">Investopedia</a> for their fare breakdown. </p>
     </div>
 
 
