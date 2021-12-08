@@ -9,6 +9,10 @@
         display: inline-block;
         margin-left: 160px;
     }
+    .listcode {
+        display: inline-block;
+        margin-left: 85px;
+    }
     </style>
   </head>
   <body>
@@ -88,6 +92,7 @@
     </div>
 <!-- page # 3 -->
     <div id="code" class="tabcontent">
+      <h2>1. A sum of Uber's total rides from 2015 to present date. </h2>
       <p>
         <a name = "p1"> Using the </a>
         <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/f0b6026c17d090ba2f385573b43da46ccf0017b6/uber_Data.csv" >uber_Data.csv</a>
@@ -102,54 +107,341 @@
         <br>
       </code>
       <br>
+      <h2>2. Analyzing Yellow Taxi's monthly raw data from 2015 to present date. </h2>
       <p>
-        <a name = "p1"> A second and more comprehensive analysis was done using the </a>
-        <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/1539353e2c195af278d8d560b46bfa4278c4e538/FHV_Base_Aggregate_Report.csv" >FHV_Base_Aggregate_Report.csv</a>
-           file, which is a tally of all taxi rides in NYC between 2015 and November 2021.
-           Data from this file, produced the the first <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/b65dd8a9a8a978bb7f94cd73fbc1985fcce3b557/aggregate_analysis.csv">pivot table</a> and graph below (Uber vs NYC Rides).
+        <a name = "p1"> An example of how the Yellow Taxi's yearly data was gathered from it's <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">monthly raw data</a>
+        is below, using year 2015.  This code was applied to years 2016-2021, with the year changed on each file and variable.</a>
+      </p>
+      <code class="codeblock">
+        <br>
+        import pandas as pd <br><br>
+
+        #Total number of Jan 2015 yellow-taxi trips. <br>
+        jan2015 = pd.read_csv('yellow_tripdata_2015-01.csv',low_memory=False) <br>
+        trips_01_2015 = len(jan2015)+1 <br>
+        ##print(trips_01_2015) <br><br>
+
+        #Total number of Feb 2015 yellow-taxi trips. <br>
+        feb2015 = pd.read_csv('yellow_tripdata_2015-02.csv',low_memory=False) <br>
+        trips_02_2015 = len(feb2015)+1 <br>
+        ##print(trips_02_2015) <br><br>
+
+        #Total number of March 2015 yellow-taxi trips. <br>
+        mar2015 = pd.read_csv('yellow_tripdata_2015-03.csv',low_memory=False) <br>
+        trips_03_2015 = len(mar2015)+1 <br>
+        ##print(trips_03_2015) <br><br>
+
+        #Total number of April 2015 yellow-taxi trips. <br>
+        apr2015 = pd.read_csv('yellow_tripdata_2015-04.csv',low_memory=False) <br>
+        trips_04_2015 = len(apr2015)+1 <br>
+        ##print(trips_04_2015) <br><br>
+
+        #Total number of May 2015 yellow-taxi trips. <br>
+        may2015 = pd.read_csv('yellow_tripdata_2015-05.csv',low_memory=False) <br>
+        trips_05_2015 = len(may2015)+1 <br>
+        ##print(trips_05_2015) <br><br>
+
+        #Total number of June 2015 yellow-taxi trips. <br>
+        jun2015 = pd.read_csv('yellow_tripdata_2015-06.csv',low_memory=False) <br>
+        trips_06_2015 = len(jun2015)+1 <br>
+        ##print(trips_06_2015) <br><br>
+
+        #Total number of July 2015 yellow-taxi trips. <br>
+        july2015 = pd.read_csv('yellow_tripdata_2015-07.csv',low_memory=False) <br>
+        trips_07_2015 = len(july2015)+1 <br>
+        ##print(trips_07_2015) <br><br>
+
+        #Total number of August 2015 yellow-taxi trips. <br>
+        aug2015 = pd.read_csv('yellow_tripdata_2015-08.csv',low_memory=False) <br>
+        trips_08_2015 = len(aug2015)+1 <br>
+        ##print(trips_08_2015) <br><br>
+
+        #Total number of September 2015 yellow-taxi trips. <br>
+        sept2015 = pd.read_csv('yellow_tripdata_2015-09.csv',low_memory=False) <br>
+        trips_09_2015 = len(sept2015)+1 <br>
+        ##print(trips_09_2015) <br><br>
+
+        #Total number of October 2015 yellow-taxi trips. <br>
+        oct2015 = pd.read_csv('yellow_tripdata_2015-10.csv',low_memory=False) <br>
+        trips_10_2015 = len(oct2015)+1 <br>
+        ##print(trips_10_2015) <br><br>
+
+        #Total number of November 2015 yellow-taxi trips. <br>
+        nov2015 = pd.read_csv('yellow_tripdata_2015-11.csv',low_memory=False) <br>
+        trips_11_2015 = len(nov2015)+1 <br>
+        ##print(trips_11_2015) <br><br>
+
+        #Total number of December 2015 yellow-taxi trips. <br>
+        dec2015 = pd.read_csv('yellow_tripdata_2015-12.csv',low_memory=False) <br>
+        trips_12_2015 = len(dec2015)+1 <br>
+        ##print(trips_12_2015) <br><br>
+
+        list_2015 = [trips_01_2015,trips_02_2015,trips_03_2015,trips_04_2015,trips_05_2015,trips_06_2015, <br><span class="listcode"></span>
+                    trips_07_2015,trips_08_2015,trips_09_2015,trips_10_2015,trips_11_2015,trips_12_2015] <br> <br><br>
+
+        df2015 = pd.DataFrame(list_2015, columns = ['2015']) <br>
+        df2015.to_csv('yellow-taxi-2015.csv', index=False) <br>
+        <br>
+      </code>
+      <p>
+        <a name = "p1"> Using the code above, the <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page" >Yellow Taxi's monthly raw data from 2015 to present date</a>
+        was summed and compiled into yearly spreadsheets, which were also then compiled into one large file. Those files were used to produce the tables and graph below.</a>
       </p>
       <code class="codeblock">
         <br>
         import matplotlib.pyplot as plt <br>
-        from matplotlib import ticker <br>
-        import pandas as pd <br><br>
+        import pandas as pd <br> <br>
 
-        #Read the CSV into a dataframe. <br>
-        df = pd.read_csv('FHV_Base_Aggregate_Report.csv') <br><br>
+        #Read in each CSV file compiled from monthly raw data. <br>
+        data1 = pd.read_csv('yellow-taxi-2015.csv') <br>
+        data2 = pd.read_csv('yellow-taxi-2016.csv') <br>
+        data3 = pd.read_csv('yellow-taxi-2017.csv') <br>
+        data4 = pd.read_csv('yellow-taxi-2018.csv') <br>
+        data5 = pd.read_csv('yellow-taxi-2019.csv') <br>
+        data6 = pd.read_csv('yellow-taxi-2020.csv') <br>
+        data7 = pd.read_csv('yellow-taxi-2021.csv') <br> <br>
 
-        #Change the case for the `Base Name` column. <br>
-        df['Base Name']= df['Base Name'].str.upper().str.title() <br><br>
+        #Concatenate the dataframes. <br>
+        frames = [data1, data2, data3, data4, data5, data6, data7] <br>
+        df = pd.concat(frames, axis = 1) <br> <br>
 
-        #Convert each value in the `Total Dispatched Trips` column to integers. <br>
-        df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(int) <br>
-        pivot = pd.pivot_table(df, index = 'Base Name', <br><span class="tabcode"></span>
-                                         columns = 'Year', <br><span class="tabcode"></span>
-                                         values = 'Total Dispatched Trips', <br><span class="tabcode"></span>
-                                         aggfunc = 'sum', <br><span class="tabcode"></span>
-                                         fill_value = 0, <br><span class="tabcode"></span>
-                                         margins = True, <br><span class="tabcode"></span>
-                                         margins_name = 'Total').sort_values('Total', ascending=False) <br><br>
+        #Find the difference in trips between each year. <br>
+        print(df.diff(axis = 1)) <br>
+        print(df.sum().diff()) <br> <br>
 
-        #Save the data to a CSV file. <br>
+        #Prepare file to merge. <br>
+        df = df.fillna(0) <br>
+        result = df.sum(axis=0) <br>
+        result.to_csv('test.csv', index=True, index_label='Year', header=['Total Dispatched Trips']) <br>
+        ax = result.plot(kind='line', title='Yellow Taxi Decline\n2015-2021') <br>
+        ax.set(xlabel='year', ylabel='# of rides in hundred millions') <br>
+        fig2 = plt.gcf() <br>
+        fig2.savefig('yellow_taxidecline.png') <br>
+        plt.show() <br>
+        <br>
+      </code>
+      <table style="width:50%" border=2px>
+      	<caption>Yellow Taxi's Monthly Decline in Rides</caption>
+      	<thead>
+      	<tr>
+          <th></th>
+      		<th>2015</th>
+      		<th>2016</th>
+      		<th>2017</th>
+      		<th>2018</th>
+      		<th>2019</th>
+      		<th>2020</th>
+      		<th>2021</th>
+      	</tr>
+      	</thead>
+      	<tbody>
+      	<tr>
+          <td>0</td>
+      		<td>NaN</td>
+      		<td>-1842128</td>
+      		<td>-1196734</td>
+      		<td>-950250</td>
+      		<td>-1092082</td>
+      		<td>-1262784</td>
+      		<td>-5035243</td>
+      	</tr>
+      	<tr>
+          <td>1</td>
+      		<td>NaN</td>
+      		<td>-1068472</td>
+      		<td>-2213224</td>
+      		<td>-676749</td>
+      		<td>-1472701</td>
+      		<td>-720021</td>
+      		<td>-4927646</td>
+      	</tr>
+      	<tr>
+          <td>2</td>
+      		<td>NaN</td>
+      		<td>-1140657</td>
+      		<td>-1916324</td>
+      		<td>-864252</td>
+      		<td>-1597831</td>
+      		<td>-4825253</td>
+      		<td>-1082140</td>
+      	</tr>
+      	<tr>
+          <td>3</td>
+      		<td>NaN</td>
+      		<td>-1137451</td>
+      		<td>-1888150</td>
+      		<td>-740673</td>
+      		<td>-1872376</td>
+      		<td>-7195146</td>
+      		<td>1933194</td>
+      	</tr>
+      	<tr>
+          <td>4</td>
+      		<td>NaN<br></td>
+      		<td>-1321409</td>
+      		<td>-1734729</td>
+      		<td>-878061</td>
+      		<td>-1658802</td>
+      		<td>-7216890</td>
+      		<td>2158738</td>
+      	</tr>
+      	<tr>
+          <td>5</td>
+      		<td>NaN<br></td>
+      		<td>-1189465</td>
+      		<td>-1478477</td>
+      		<td>-943162</td>
+      		<td>-1772807</td>
+      		<td>-6391264</td>
+      		<td>2284504</td>
+      	</tr>
+      	<tr>
+          <td>6</td>
+      		<td>NaN<br></td>
+      		<td>-1268703</td>
+      		<td>-1705594</td>
+      		<td>-738738</td>
+      		<td>-1539329</td>
+      		<td>-5510007</td>
+      		<td>2021103</td>
+      	</tr>
+      	<tr>
+          <td>7</td>
+      		<td>NaN<br></td>
+      		<td>-1188041</td>
+      		<td>-1520110</td>
+      		<td>-573019</td>
+      		<td>-1775777</td>
+      		<td>-5066073</td>
+      		<td>NaN</td>
+      	</tr>
+      	<tr>
+          <td>8</td>
+      		<td>NaN<br></td>
+      		<td>-1109045</td>
+      		<td>-1170559</td>
+      		<td>-905326</td>
+      		<td>-1472345</td>
+      		<td>-5226776</td>
+      		<td>NaN</td>
+      	</tr>
+      	<tr>
+          <td>9</td>
+      		<td>NaN<br></td>
+      		<td>-1460862</td>
+      		<td>-1085811</td>
+      		<td>-947710</td>
+      		<td>-1607214</td>
+      		<td>-5532760</td>
+      		<td>NaN</td>
+      	</tr>
+      	<tr>
+          <td>10</td>
+      		<td>NaN<br></td>
+      		<td>-1210548</td>
+      		<td>-817325</td>
+      		<td>-1139639</td>
+      		<td>-1267053</td>
+      		<td>-5369126</td>
+      		<td>NaN</td>
+      	</tr>
+      	<tr>
+          <td>11</td>
+      		<td>NaN<br></td>
+      		<td>-1011165</td>
+      		<td>-941132</td>
+      		<td>-1335045</td>
+      		<td>-1276914</td>
+      		<td>-5434420</td>
+      		<td>NaN</td>
+      	</tr>
+      	<tbody>
+      </table>
+      <img src="yellow_taxidecline.png" alt="Yellow Taxi Rides 2015-2021">
+      <br>
+      <h2>3. Working with Uber's, Yellow Taxi's, and TLC's small business data. </h2>
+      <p>
+        <a name = "p1"> A more comprehensive analysis was done using the </a>
+        <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/1539353e2c195af278d8d560b46bfa4278c4e538/FHV_Base_Aggregate_Report.csv">FHV_Base_Aggregate_Report.csv</a>
+           file, which is a tally of all non-yellow-cab rides in NYC between 2015 and 2021, and the
+           <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/bed3fcb01a1e8dbfd4de5e3865efef7bc7f39296/yellow_taxidata.csv">yellow_taxidata.csv</a>
+           file, which I produced from the Yellow Taxi's <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">raw data</a> and the code above.
+           Analyzing these files produced a <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/b65dd8a9a8a978bb7f94cd73fbc1985fcce3b557/aggregate_analysis.csv">pivot table</a>
+           and the graphs below (Uber vs NYC Rides and Uber vs Yellow Taxi Rides).
+      </p>
+      <code class="codeblock">
+        <br>
+        import matplotlib.pyplot as plt <br>
+        import pandas as pd <br>
+        import pandasql as psql <br><br>
+
+        #Read the CSV files into a dataframe. <br>
+        df1 = pd.read_csv('FHV_Base_Aggregate_Report.csv') <br>
+        df2 = pd.read_csv('yellow_taxidata.csv') <br><br>
+
+        """ <br>
+        Clean the data. <br>
+        1. Change the case for the `Base Name` column. <br>
+        2. Convert each value in the `Total Dispatched Trips` column to integers. <br>
+        3. Add the `Base Name` column to the second data frame. <br>
+        4. Reindex the second dataframe to match the first. <br>
+        """ <br><br>
+
+        df1['Base Name']= df1['Base Name'].str.upper().str.title() <br>
+        df1['Total Dispatched Trips'] = df1['Total Dispatched Trips'].str.replace(",","").astype(int) <br>
+        df2['Base Name'] = 'Yellow Taxi' <br>
+        df2 = df2.reindex(columns=['Base Name', 'Year', 'Total Dispatched Trips']) <br><br>
+
+        #Organize/select the data from the first dataframe. <br>
+        name_year_trips = """ <br>
+        SELECT DISTINCT `BASE NAME`, YEAR, SUM(`TOTAL DISPATCHED TRIPS`)  AS `Total Dispatched Trips` <br>
+        FROM df1 <br>
+        GROUP BY `BASE NAME`, YEAR <br>
+        """ <br>
+        query = psql.sqldf(name_year_trips) <br><br>
+
+        #Join the data from the two dataframes. <br>
+        frames = [query, df2] <br>
+        concat = pd.concat(frames, ignore_index=True) <br><br>
+
+        #Create the pivot table. <br>
+        pivot = pd.pivot_table(concat, index='Base Name', <br><span class="tabcode"></span>
+                                         columns='Year', <br><span class="tabcode"></span>
+                                         values='Total Dispatched Trips', <br><span class="tabcode"></span>
+                                         aggfunc='sum', <br><span class="tabcode"></span>
+                                         fill_value=0, <br><span class="tabcode"></span>
+                                         margins=True, <br><span class="tabcode"></span>
+                                         margins_name='Total').sort_values('Total',
+                                                                             ascending=False) <br><br>
+
+        #Save this data to a CSV file for later use. <br>
         pivot.to_csv('aggregate_analysis.csv') <br><br>
 
-        #Working with the same pivot table, view the top 3 companies against the total # of rides. <br>
-        top_cabs = pivot.head(4) <br>
-        top_cabs = top_cabs.drop(columns='Total') <br>
-        top_cabs = top_cabs.drop('Total') <br><br>
+        #Working with the same pivot table, view the top 5 companies and drop the totals row and column. <br>
+        pivot = pivot.drop(columns='Total') <br>
+        pivot = pivot.drop('Total') <br>
+        top_cabs = pivot.head(5) <br><br>
+
+        #Transpose the rows and columns to arrange the data in such a way that it can be graphed. <br>
+        top_cabs_transposed = top_cabs.T <br><br>
 
         #Graph, save, and show the data. <br>
-        ax = top_cabs.plot(kind='barh', title='Uber vs NYC Rides\n2015-2021') <br>
-        ax.invert_yaxis() <br>
-        ax.set(xlabel='# of rides in hundred millions', ylabel='base name') <br>
+        ax = top_cabs_transposed.plot(kind='line', title='Uber vs NYC Rides\n2015-2021') <br>
+        ax.set(xlabel='year', ylabel='# of rides in hundred millions') <br>
         fig = plt.gcf() <br>
-        fig.savefig('uber.png') <br>
+        fig.savefig('ubervsnyc.png') <br>
+        plt.show() <br><br>
+
+        #Pulling only Uber's and Yellow Taxi's data using the methods above. <br>
+        top_cabs2 = pivot.head(2) <br>
+        top_cabs_transposed2 = top_cabs2.T <br>
+        bx = top_cabs_transposed2.plot(kind='line', title='Uber vs Yellow Taxi Rides\n2015-2021') <br>
+        bx.set(xlabel='year', ylabel='# of rides in hundred millions') <br>
+        fig = plt.gcf() <br>
+        fig.savefig('ubervsyt.png') <br>
         plt.show() <br><br>
       </code>
-      <img src="uber.png" alt="Uber vs NYC Rides 2015-2021">
-
-
-      <h2>More to come...</h2>
+      <img src="ubervsnyc.png" alt="Uber vs NYC Rides 2015-2021">     <img src="ubervsyt.png" alt="Uber vs YT Rides 2015-2021">
     </div>
 <!-- My resources page -->
     <div id="resources" class="tabcontent">
@@ -161,6 +453,7 @@
       </ul>
       <p>Thank you to <a href = "https://github.com/fivethirtyeight/uber-tlc-foil-response">FiveThirtyEight</a> for wrangling information from Uber. </p>
       <p>Thank you to <a href = "https://www.investopedia.com/articles/personal-finance/021015/uber-versus-yellow-cabs-new-york-city.asp">Investopedia</a> for their fare breakdown. </p>
+      <p>Thank you to <a href = "https://documentedny.com/2021/11/23/taxi-cab-medallion-explained/">Documented</a> for investigating NYC's Yellow Taxi brankruptcy. </p>
     </div>
 
 
