@@ -193,13 +193,13 @@
         import pandas as pd <br> <br>
 
         #Read in each CSV file compiled from monthly raw data. <br>
-        data1 = pd.read_csv('yellow-taxi-2015.csv') <br>
-        data2 = pd.read_csv('yellow-taxi-2016.csv') <br>
-        data3 = pd.read_csv('yellow-taxi-2017.csv') <br>
-        data4 = pd.read_csv('yellow-taxi-2018.csv') <br>
-        data5 = pd.read_csv('yellow-taxi-2019.csv') <br>
-        data6 = pd.read_csv('yellow-taxi-2020.csv') <br>
-        data7 = pd.read_csv('yellow-taxi-2021.csv') <br> <br>
+        data1 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2015.csv" >'yellow-taxi-2015.csv'</a>) <br>
+        data2 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2016.csv" >'yellow-taxi-2016.csv'</a>) <br>
+        data3 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2017.csv" >'yellow-taxi-2017.csv'</a>) <br>
+        data4 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2018.csv" >'yellow-taxi-2018.csv'</a>) <br>
+        data5 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2019.csv" >'yellow-taxi-2019.csv'</a>) <br>
+        data6 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2020.csv" >'yellow-taxi-2020.csv'</a>) <br>
+        data7 = pd.read_csv(<a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/3f81d9ace80217c1305a5bbb7261d5d11a5b17e0/yellow-taxi-2021.csv" >'yellow-taxi-2021.csv'</a>) <br> <br>
 
         #Concatenate the dataframes. <br>
         frames = [data1, data2, data3, data4, data5, data6, data7] <br>
@@ -212,7 +212,7 @@
         #Prepare file to merge. <br>
         df = df.fillna(0) <br>
         result = df.sum(axis=0) <br>
-        result.to_csv('test.csv', index=True, index_label='Year', header=['Total Dispatched Trips']) <br>
+        result.to_csv('yellow_taxidata.csv', index=True, index_label='Year', header=['Total Dispatched Trips']) <br>
         ax = result.plot(kind='line', title='Yellow Taxi Decline\n2015-2021') <br>
         ax.set(xlabel='year', ylabel='# of rides in hundred millions') <br>
         fig2 = plt.gcf() <br>
