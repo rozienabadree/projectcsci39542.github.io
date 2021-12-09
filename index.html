@@ -20,9 +20,9 @@
       <h1>Should Uber be capped in NYC?</h1>
     </center>
     <div class="tab">
-      <button class="tablink" onclick="openPage('intro', this)" id="defaultOpen">Introduction & Video</button>
-      <button class="tablink" onclick="openPage('analysis', this)">Ridership & Fares</button>
-      <button class="tablink" onclick="openPage('code', this)">Codes & Raw Data</button>
+      <button class="tablink" onclick="openPage('intro', this)" id="defaultOpen">Overview</button>
+      <button class="tablink" onclick="openPage('analysis', this)">An Intimate Analysis</button>
+      <button class="tablink" onclick="openPage('code', this)">Data, Techniques & Codes</button>
       <button class="tablink" onclick="openPage('resources', this)">Resources</button>
     </div>
 
@@ -47,6 +47,173 @@
       </div>
 <!-- page number 2 -->
     <div id="analysis" class="tabcontent">
+      <h2> Uber's Data </h2>
+      <p>
+        From the analyzed 2015-present data, Uber has been the top-performing taxi company in NYC.
+        From the table below, Uber outperforms their competition in the millions, steadily increasing each year, and they consisently account for over
+        In 2020, there is a decline in Uber's ridership and overall taxi rides in 2020 due to the pandemic.
+      </p>
+      <br>
+      <br>
+      <h2> Yellow Taxi's Data </h2>
+      <p>
+        From the analyzed 2015-present data, the Yellow Taxi has been losing millions of rides since January 2015 until April 2021.  The table below shows the difference between each column.
+        For example: the largest difference in ridership between 2015 and 2016 was in January of 2016 with a drop of 1,842,128 rides; the largest drop in ridership between 2016 and 2017 was
+        in February of 2017 with a loss of 2,213,224 rides.  The largest drop in ridership between 2017 and 2018 was in December 2018 etc.  Overall, the largest yearly drop in ridership
+        is between 2019 and 2020; the Yellow Taxi lost 59,750,520 rides.
+      </p>
+      <br>
+      <br>
+      <table style="width:50%" border=2px>
+        <caption>Yellow Taxi's Monthly Decline in Rides</caption>
+        <thead>
+        <tr>
+          <th></th>
+          <th>2015</th>
+          <th>2016</th>
+          <th>2017</th>
+          <th>2018</th>
+          <th>2019</th>
+          <th>2020</th>
+          <th>2021</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>0</td>
+          <td>NaN</td>
+          <td>-1842128</td>
+          <td>-1196734</td>
+          <td>-950250</td>
+          <td>-1092082</td>
+          <td>-1262784</td>
+          <td>-5035243</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>NaN</td>
+          <td>-1068472</td>
+          <td>-2213224</td>
+          <td>-676749</td>
+          <td>-1472701</td>
+          <td>-720021</td>
+          <td>-4927646</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NaN</td>
+          <td>-1140657</td>
+          <td>-1916324</td>
+          <td>-864252</td>
+          <td>-1597831</td>
+          <td>-4825253</td>
+          <td>-1082140</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>NaN</td>
+          <td>-1137451</td>
+          <td>-1888150</td>
+          <td>-740673</td>
+          <td>-1872376</td>
+          <td>-7195146</td>
+          <td>1933194</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>NaN<br></td>
+          <td>-1321409</td>
+          <td>-1734729</td>
+          <td>-878061</td>
+          <td>-1658802</td>
+          <td>-7216890</td>
+          <td>2158738</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>NaN<br></td>
+          <td>-1189465</td>
+          <td>-1478477</td>
+          <td>-943162</td>
+          <td>-1772807</td>
+          <td>-6391264</td>
+          <td>2284504</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>NaN<br></td>
+          <td>-1268703</td>
+          <td>-1705594</td>
+          <td>-738738</td>
+          <td>-1539329</td>
+          <td>-5510007</td>
+          <td>2021103</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>NaN<br></td>
+          <td>-1188041</td>
+          <td>-1520110</td>
+          <td>-573019</td>
+          <td>-1775777</td>
+          <td>-5066073</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>NaN<br></td>
+          <td>-1109045</td>
+          <td>-1170559</td>
+          <td>-905326</td>
+          <td>-1472345</td>
+          <td>-5226776</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>NaN<br></td>
+          <td>-1460862</td>
+          <td>-1085811</td>
+          <td>-947710</td>
+          <td>-1607214</td>
+          <td>-5532760</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>NaN<br></td>
+          <td>-1210548</td>
+          <td>-817325</td>
+          <td>-1139639</td>
+          <td>-1267053</td>
+          <td>-5369126</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>NaN<br></td>
+          <td>-1011165</td>
+          <td>-941132</td>
+          <td>-1335045</td>
+          <td>-1276914</td>
+          <td>-5434420</td>
+          <td>NaN</td>
+        </tr>
+        <tbody>
+      </table>
+      <br>
+      <br>
+      <p>
+        To drive home the point, please see the graph below which shows the Yellow Taxi's steady decline.
+      </p>
+      <img src="yellow_taxidecline.png" alt="Yellow Taxi Rides 2015-2021">
+      <h2> Uber vs Yellow Taxi vs NYC </h2>
+      <p>
+        Uber is outperforming all other taxi companies in NYC and in doing so, it is becomming a monopoly. Since 2015, Uber has completed an estimated 753,714,454 out of a total of 1,831,217,600 rides, which is 41% of all total rides.
+        In other words, today Uber controls 41% of the market.
+      </p>
+
+
       <h2>Ridership</h2><br>
         <table style="width:50%" border=2px>
           <tr>
@@ -88,30 +255,176 @@
             <tr>
           </tbody>
         </table>
-        <h2>More to come</h2>
+      <h2>More to come</h2>
     </div>
 <!-- page # 3 -->
     <div id="code" class="tabcontent">
       <h2>1. A sum of Uber's total rides from 2015 to present date. </h2>
+      <h3> Data & Technique: </h3>
       <p>
-        <a name = "p1"> Using the </a>
+        <a name = "p1"> Using NYC's Open Data </a>
         <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/f0b6026c17d090ba2f385573b43da46ccf0017b6/uber_Data.csv" >uber_Data.csv</a>
-           file, Uber had a total of 753,714,454 from 2015 to present date.
+           file and Pandas, it was found that Uber had a total of 753,714,454 rides from 2015 to present date.  To be specific, the file was loaded into a Pandas dataframe,
+           and the numbers that were in the `Total Dispatched Trips` column were converted to integers and summed.
       </p>
+      <h3> Code: </h3>
       <code class="codeblock">
         <br>
         df = pd.read_csv('uber_Data.csv') <br>
-        df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(float) <br>
+        df['Total Dispatched Trips'] = df['Total Dispatched Trips'].str.replace(",","").astype(int) <br>
         total = df['Total Dispatched Trips'].sum() <br>
         print(total) <br>
         <br>
       </code>
       <br>
       <h2>2. Analyzing Yellow Taxi's monthly raw data from 2015 to present date. </h2>
+      <h3> Data & Technique: </h3>
       <p>
-        <a name = "p1"> An example of how the Yellow Taxi's yearly data was gathered from it's <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">monthly raw data</a>
-        is below, using year 2015.  This code was applied to years 2016-2021, with the year changed on each file and variable.</a>
+        Approximately 79 CSV data files were used to analyze the Yellow Taxi's ridership.  The analysis ranged from years 2015 to 2021; there are 12 monthly files for years 2015-2020, and 7 files for 2021.
+        That monthly raw data can be found <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">here</a>.  A list of the names the CSV files is provided in the table below. <br><br>
+        <table style="width:50%" border=2px>
+      	<caption>CSV Files Used in Yellow Taxi Analysis</caption>
+      	<thead>
+      	<tr>
+      		<th><br></th>
+      		<th>2015</th>
+      		<th>2016</th>
+      		<th>2017</th>
+      		<th>2018</th>
+      		<th>2019</th>
+      		<th>2020</th>
+      		<th>2021</th>
+      	</tr>
+      	</thead>
+      	<tbody>
+      	<tr>
+      		<td>JAN</td>
+      		<td>yellow_tripdata_2015-01.csv</td>
+      		<td>yellow_tripdata_2016-01.csv</td>
+      		<td>yellow_tripdata_2017-01.csv</td>
+      		<td>yellow_tripdata_2018-01.csv</td>
+      		<td>yellow_tripdata_2019-01.csv</td>
+      		<td>yellow_tripdata_2020-01.csv</td>
+      		<td>yellow_tripdata_2021-01.csv</td>
+      	</tr>
+      	<tr>
+      		<td>FEB</td>
+      		<td>yellow_tripdata_2015-02.csv</td>
+      		<td>yellow_tripdata_2016-02.csv</td>
+      		<td>yellow_tripdata_2017-02.csv</td>
+      		<td>yellow_tripdata_2018-02.csv</td>
+      		<td>yellow_tripdata_2019-02.csv</td>
+      		<td>yellow_tripdata_2020-02.csv</td>
+      		<td>yellow_tripdata_2021-02.csv</td>
+      	</tr>
+      	<tr>
+      		<td>MAR</td>
+      		<td>yellow_tripdata_2015-03.csv</td>
+      		<td>yellow_tripdata_2016-03.csv</td>
+      		<td>yellow_tripdata_2017-03.csv</td>
+      		<td>yellow_tripdata_2018-03.csv</td>
+      		<td>yellow_tripdata_2019-03.csv</td>
+      		<td>yellow_tripdata_2020-03.csv</td>
+      		<td>yellow_tripdata_2021-03.csv</td>
+      	</tr>
+      	<tr>
+      		<td>APR</td>
+      		<td>yellow_tripdata_2015-04.csv</td>
+      		<td>yellow_tripdata_2016-04.csv</td>
+      		<td>yellow_tripdata_2017-04.csv</td>
+      		<td>yellow_tripdata_2018-04.csv</td>
+      		<td>yellow_tripdata_2019-04.csv</td>
+      		<td>yellow_tripdata_2020-04.csv</td>
+      		<td>yellow_tripdata_2021-04.csv</td>
+      	</tr>
+      	<tr>
+      		<td>MAY</td>
+      		<td>yellow_tripdata_2015-05.csv</td>
+      		<td>yellow_tripdata_2016-05.csv</td>
+      		<td>yellow_tripdata_2017-05.csv</td>
+      		<td>yellow_tripdata_2018-05.csv</td>
+      		<td>yellow_tripdata_2019-05.csv</td>
+      		<td>yellow_tripdata_2020-05.csv</td>
+      		<td>yellow_tripdata_2021-05.csv</td>
+      	</tr>
+      	<tr>
+      		<td>JUN</td>
+      		<td>yellow_tripdata_2015-06.csv</td>
+      		<td>yellow_tripdata_2016-06.csv</td>
+      		<td>yellow_tripdata_2017-06.csv</td>
+      		<td>yellow_tripdata_2018-06.csv</td>
+      		<td>yellow_tripdata_2019-06.csv</td>
+      		<td>yellow_tripdata_2020-06.csv</td>
+      		<td>yellow_tripdata_2021-06.csv</td>
+      	</tr>
+      	<tr>
+      		<td>JUL</td>
+      		<td>yellow_tripdata_2015-07.csv</td>
+      		<td>yellow_tripdata_2016-07.csv</td>
+      		<td>yellow_tripdata_2017-07.csv</td>
+      		<td>yellow_tripdata_2018-07.csv</td>
+      		<td>yellow_tripdata_2019-07.csv</td>
+      		<td>yellow_tripdata_2020-07.csv</td>
+      		<td>yellow_tripdata_2021-07.csv</td>
+      	</tr>
+      	<tr>
+      		<td>AUG</td>
+      		<td>yellow_tripdata_2015-08.csv</td>
+      		<td>yellow_tripdata_2016-08.csv</td>
+      		<td>yellow_tripdata_2017-08.csv</td>
+      		<td>yellow_tripdata_2018-08.csv</td>
+      		<td>yellow_tripdata_2019-08.csv</td>
+      		<td>yellow_tripdata_2020-08.csv</td>
+      		<td></td>
+      	</tr>
+      	<tr>
+      		<td>SEPT</td>
+      		<td>yellow_tripdata_2015-09.csv</td>
+      		<td>yellow_tripdata_2016-09.csv</td>
+      		<td>yellow_tripdata_2017-09.csv</td>
+      		<td>yellow_tripdata_2018-09.csv</td>
+      		<td>yellow_tripdata_2019-09.csv</td>
+      		<td>yellow_tripdata_2020-09.csv</td>
+      		<td></td>
+      	</tr>
+      	<tr>
+      		<td>OCT</td>
+      		<td>yellow_tripdata_2015-10.csv</td>
+      		<td>yellow_tripdata_2016-10.csv</td>
+      		<td>yellow_tripdata_2017-10.csv</td>
+      		<td>yellow_tripdata_2018-10.csv</td>
+      		<td>yellow_tripdata_2019-10.csv</td>
+      		<td>yellow_tripdata_2020-10.csv</td>
+      		<td></td>
+      	</tr>
+      	<tr>
+      		<td>NOV</td>
+      		<td>yellow_tripdata_2015-11.csv</td>
+      		<td>yellow_tripdata_2016-11.csv</td>
+      		<td>yellow_tripdata_2017-11.csv</td>
+      		<td>yellow_tripdata_2018-11.csv</td>
+      		<td>yellow_tripdata_2019-11.csv</td>
+      		<td>yellow_tripdata_2020-11.csv</td>
+      		<td></td>
+      	</tr>
+      	<tr>
+      		<td>DEC</td>
+      		<td>yellow_tripdata_2015-12.csv</td>
+      		<td>yellow_tripdata_2016-12.csv</td>
+      		<td>yellow_tripdata_2017-12.csv</td>
+      		<td>yellow_tripdata_2018-12.csv</td>
+      		<td>yellow_tripdata_2019-12.csv</td>
+      		<td>yellow_tripdata_2020-12.csv</td>
+      		<td></td>
+      	</tr>
+      	<tbody>
+      </table>
+      <br>
+      <br>
+        Regarding technique, each CSV file was loaded into a Pandas dataframe.  Since each row represents a different trip, the length of the dataframe was calculated plus 1 to accomodate for the 0 indexed row.
+        The code used to analyze the monthly data from 2015 is below.  This code was applied to the CSV files for years 2016-2021, with the names and variables changed. </a>
       </p>
+      <h3> Code: </h3>
       <code class="codeblock">
         <br>
         import pandas as pd <br><br>
@@ -183,10 +496,17 @@
         df2015.to_csv('yellow-taxi-2015.csv', index=False) <br>
         <br>
       </code>
+      <h3> Data & Technique: </h3>
       <p>
         <a name = "p1"> Using the code above, the <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page" >Yellow Taxi's monthly raw data from 2015 to present date</a>
-        was summed and compiled into yearly spreadsheets, which were also then compiled into one large file. Those files were used to produce the tables and graph below.</a>
+        was summed and compiled into yearly spreadsheets, which were then summed into one large file; using Pandas, each yearly spreadsheet was read into its own dataframe.
+        Those dataframes were concatentated into 1 dataframe that shows the monthly rides for each year.  The difference between the months of each year (also the difference between
+        the columns) was calculated using <i>diff(axis=1)</i>.  The yearly sum was also calculated and exported to the
+        <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/bed3fcb01a1e8dbfd4de5e3865efef7bc7f39296/yellow_taxidata.csv" >'yellow-taxi-2015.csv'</a> file.
+        Last, a graph showing the Yellow Taxi's ridership was generated using MatPlotLib.
+
       </p>
+      <h3> Code: </h3>
       <code class="codeblock">
         <br>
         import matplotlib.pyplot as plt <br>
@@ -360,15 +680,25 @@
       <img src="yellow_taxidecline.png" alt="Yellow Taxi Rides 2015-2021">
       <br>
       <h2>3. Working with Uber's, Yellow Taxi's, and TLC's small business data. </h2>
+      <h3> Data & Technique: </h3>
       <p>
         <a name = "p1"> A more comprehensive analysis was done using the </a>
         <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/1539353e2c195af278d8d560b46bfa4278c4e538/FHV_Base_Aggregate_Report.csv">FHV_Base_Aggregate_Report.csv</a>
            file, which is a tally of all non-yellow-cab rides in NYC between 2015 and 2021, and the
            <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/bed3fcb01a1e8dbfd4de5e3865efef7bc7f39296/yellow_taxidata.csv">yellow_taxidata.csv</a>
-           file, which I produced from the Yellow Taxi's <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">raw data</a> and the code above.
+           file, which I produced from the Yellow Taxi's <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">raw monthly data</a> and the codes above.
            Analyzing these files produced a <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/b65dd8a9a8a978bb7f94cd73fbc1985fcce3b557/aggregate_analysis.csv">pivot table</a>
            and the graphs below (Uber vs NYC Rides and Uber vs Yellow Taxi Rides).
+           <br>
+           <br>
+           Regarding technique, the <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/1539353e2c195af278d8d560b46bfa4278c4e538/FHV_Base_Aggregate_Report.csv">FHV_Base_Aggregate_Report.csv</a>
+           and the <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/bed3fcb01a1e8dbfd4de5e3865efef7bc7f39296/yellow_taxidata.csv">yellow_taxidata.csv</a> files were read into individual Pandas dataframes.
+           After, their columns and data were cleaned and organized using both Pandas and Pandasql.  The dataframes were later concatenated into 1 dataframe, which was then pivoted to generate
+           a table with each year in its own column and each company in its own row.  The results of that table can be found in the
+           <a href = "https://github.com/rozienabadree/projectcsci39542.github.io/blob/b65dd8a9a8a978bb7f94cd73fbc1985fcce3b557/aggregate_analysis.csv">aggregate_analysis.csv/pivot table</a> file.
+           Lastly, this data was filtered and transposed using Pandas, and graphed using MatPlotLib.
       </p>
+      <h3> Code: </h3>
       <code class="codeblock">
         <br>
         import matplotlib.pyplot as plt <br>
@@ -448,12 +778,15 @@
       <h3>Resources</h3>
       <p>Thank you to NYC Open Data for their content. </p>
       <ul>
-        <li>This <a href = "https://data.cityofnewyork.us/Transportation/uber-Data/3jeu-mn7j">file</a> was used for the first analysis.</li>
-        <li>This <a href = "https://data.cityofnewyork.us/Transportation/FHV-Base-Aggregate-Report/2v9c-2k7f">file</a> was used for the second analysis and first graph.</li>
+        <li>This <a href = "https://data.cityofnewyork.us/Transportation/uber-Data/3jeu-mn7j">file</a> was used to produce the total number of Uber's rides in NYC since 2015.</li>
+        <li>These <a href = "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">files</a> were used to analyze the Yellow Taxi's ridership from 2015 to present day.</li>
+        <li>This <a href = "https://data.cityofnewyork.us/Transportation/FHV-Base-Aggregate-Report/2v9c-2k7f">file</a> was used to generate the total number of taxi rides in NYC and to compare Uber's ridership to smaller taxi businesses.</li>
       </ul>
-      <p>Thank you to <a href = "https://github.com/fivethirtyeight/uber-tlc-foil-response">FiveThirtyEight</a> for wrangling information from Uber. </p>
       <p>Thank you to <a href = "https://www.investopedia.com/articles/personal-finance/021015/uber-versus-yellow-cabs-new-york-city.asp">Investopedia</a> for their fare breakdown. </p>
       <p>Thank you to <a href = "https://documentedny.com/2021/11/23/taxi-cab-medallion-explained/">Documented</a> for investigating NYC's Yellow Taxi brankruptcy. </p>
+      <p>Thank you to <a href = "https://www.businessinsider.com/uber-shareholders-letter-demands-lobbying-transparency-2021-4?op=1">this shareholder</a> for demanding transparency re: Uber's lobbying. </p>
+      <p>Thank you to the <a href = "https://nypost.com/2018/08/04/ride-sharing-companies-spent-over-1m-lobbying-in-nyc/">New York Post</a> and <a href = "https://www.nytimes.com/2020/10/12/technology/you-cant-escape-ubers-lobbying.html">The New York Times</a> for reporting on Uber's lobbying. </p>
+      <p>Thank you to <a href = "https://www.jwj.org/how-much-will-uber-spend-to-get-its-way">Jobs with Justice</a> for calling out Uber's lobbying and bullying tactics. </p>
     </div>
 
 
