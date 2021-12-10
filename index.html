@@ -21,43 +21,37 @@
     </center>
     <div class="tab">
       <button class="tablink" onclick="openPage('intro', this)" id="defaultOpen">Overview</button>
-      <button class="tablink" onclick="openPage('analysis', this)">An Intimate Analysis</button>
+      <button class="tablink" onclick="openPage('analysis', this)">The Analysis</button>
       <button class="tablink" onclick="openPage('code', this)">Data, Techniques & Codes</button>
       <button class="tablink" onclick="openPage('resources', this)">Resources</button>
     </div>
 
     <div id="intro" class="tabcontent">
+      <h2> Overview </h2>
+      <p>
+        Uber has driven NYC's once solid yellow taxi business into brankruptcy.  For this project, I took a deep-dive into their
+        ridership data using data science, particularly Pandas, Pandasql, and MatPlotLib, to prove that Uber controls the taxi market.  I also looked into Uber's lobbying tactics.
+        The results are can be found on `The Analysis` page and are worth the read.  Codes and explanations can be found on the `Data, Techniques & Codes`
+        page.  All resources are listed on the `Resources` page. <br><br>
+        Enjoy.
         <br>
         <br>
-      <!-- Embed trailer video -->
-      <table style="width:100%">
-        <h3>TEST VIDEO</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/OkQsuskZLus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </table>
-        <br>
-        <br>
-        <h2><strong>Abstract</strong></h2>
-        <p>Uber has recently driven the once-solid yellow cab industry into bankruptcy.
-          I intend on taking a deep-dive into the available data to analyze and visualize Uber’s rapid increase in rides,
-          the yellow cab’s rapid decrease in rides, and compare Uber's and the yellow taxi’s fares/fees.
-          </p>
-          <br>
-          <br>
-          <h2>More to come</h2>
-      </div>
-<!-- page number 2 -->
+        <center>
+          <img src="ubervsyt.png" alt="Uber vs NYC Rides 2015-2021">
+        </center>
+      </p>
+    </div>
+
     <div id="analysis" class="tabcontent">
       <h2> Uber's Data </h2>
       <p>
-        From the analyzed 2015-present data, Uber has been the top-performing taxi company in NYC.
-        From the table below, Uber outperforms their competition in the millions, steadily increasing each year, and they consisently account for over
-        In 2020, there is a decline in Uber's ridership and overall taxi rides in 2020 due to the pandemic.
+        According to data from NYC Open Data, Uber is the top-performing taxi company in NYC with a total of 753,714,454 rides from 2015 to present date.
       </p>
       <br>
       <br>
       <h2> Yellow Taxi's Data </h2>
       <p>
-        From the analyzed 2015-present data, the Yellow Taxi has been losing millions of rides since January 2015 until April 2021.  The table below shows the difference between each column.
+        From the 2015-present data, NYC's Yellow Taxis have been losing millions of rides since January 2015 until April 2021.  The table below shows the difference in ridership between years and most of it is in the negative.
         For example: the largest difference in ridership between 2015 and 2016 was in January of 2016 with a drop of 1,842,128 rides; the largest drop in ridership between 2016 and 2017 was
         in February of 2017 with a loss of 2,213,224 rides.  The largest drop in ridership between 2017 and 2018 was in December 2018 etc.  Overall, the largest yearly drop in ridership
         is between 2019 and 2020; the Yellow Taxi lost 59,750,520 rides.
@@ -207,55 +201,191 @@
         To drive home the point, please see the graph below which shows the Yellow Taxi's steady decline.
       </p>
       <img src="yellow_taxidecline.png" alt="Yellow Taxi Rides 2015-2021">
+      <br>
+      <br>
       <h2> Uber vs Yellow Taxi vs NYC </h2>
       <p>
-        Uber is outperforming all other taxi companies in NYC and in doing so, it is becomming a monopoly. Since 2015, Uber has completed an estimated 753,714,454 out of a total of 1,831,217,600 rides, which is 41% of all total rides.
-        In other words, today Uber controls 41% of the market.
+        From the 2015-present data, Uber outperforms their competition in the millions and in doing so, it is becomming a monopoly.
+        Since 2015, Uber has completed an estimated 753,714,454 out of a total of 1,831,217,600 rides, which is 41% of all total rides.  In other words, today Uber controls 41% of the market.
+        In 2020, there was a decline in Uber's ridership and overall taxi rides in 2020 due to the pandemic.  However,
+        Uber still completed 90 million rides in NYC compared to the 1.5 million Yellow Taxi rides and all other taxi companies pale in comparison. <br><br>
+        The table below provides the number of yearly rides for the top 4 taxi companies in NYC.
       </p>
-
-
-      <h2>Ridership</h2><br>
-        <table style="width:50%" border=2px>
+      <br>
+      <br>
+      <table style="width:50%" border=2px>
+        <caption>Top 4 Cab Companies in NYC</caption>
+        <thead>
+        <tr>
+          <th>Base Name</th>
+          <th>2015</th>
+          <th>2016</th>
+          <th>2017</th>
+          <th>2018</th>
+          <th>2019</th>
+          <th>2020</th>
+          <th>2021</th>
+          <th>Total</th>
+          </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>TYPE</th>
-            <th>DESCRIPTION</th>
-            <th>BASE FARE</th>
-            <th>FINANCIAL BREAKDOWN</th>
-            <th>MINIMUM FARE</th>
+            <td>Total</td>
+            <td>207235764</td>
+            <td>259460434</td>
+            <td>302756131</td>
+            <td>363228443</td>
+            <td>363977910</td>
+            <td>182817109</td>
+            <td>151741809</td>
+            <td>1831217600</td>
+          </tr>
+          <tr>
+            <td>Uber</td>
+            <td>36275937</td>
+            <td>70067854</td>
+            <td>109642713</td>
+            <td>163103265</td>
+            <td>181025304</td>
+            <td>103184679</td>
+            <td>90414702</td>
+            <td>753714454</td>
+          </tr>
+          <tr>
+            <td>Yellow Taxi</td>
+            <td>146113001</td>
+            <td>131165055</td>
+            <td>113496886</td>
+            <td>102804262</td>
+            <td>84399031</td>
+            <td>24648511</td>
+            <td>15000707</td>
+            <td>617627453</td>
+          </tr>
+          <tr>
+            <td>Lyft</td>
+            <td>2615481</td>
+            <td>11415958</td>
+            <td>26361098</td>
+            <td>44823801</td>
+            <td>57891012</td>
+            <td>37252636</td>
+            <td>34669137</td>
+            <td>215029123</td>
+          </tr>
+          <tr>
+            <td>Via</td>
+            <td>1767709</td>
+            <td>6085133</td>
+            <td>10324271<br></td>
+            <td>11345582</td>
+            <td>11279889</td>
+            <td>2872556</td>
+            <td>862418</td>
+            <td>44537558</td>
           </tr>
           <tbody>
-            <tr>
-              <td>UberX</td>
-              <td>regular/professional drivers; regular cars</td>
-              <td>$2.55</td>
-              <td>$0.35 per minute + $1.75 per mile</td>
-              <td>$7.00</td>
-            </tr>
-            <tr>
-              <td>uberXL</td>
-              <td>regular/professional drivers; regular SUVs</td>
-              <td>$3.85</td>
-              <td>$0.50 per minute + $2.85 per mile</td>
-              <td>$10.50</td>
-            </tr>
-            <tr>
-              <td>UberBLACK</td>
-              <td>professional drivers; upscale cars</td>
-              <td>$7.00</td>
-              <td>$0.65 per minute + $3.75 per mile</td>
-              <td>$15.00</td>
-            </tr>
-            <tr>
-              <td>UberSUV</td>
-              <td>professional drivers; upscale SUVs</td>
-              <td>$14.00</td>
-              <td>$0.65 per minute + $3.75 per mile</td>
-              <td>$25.00</td>
-            </tr>
-            <tr>
-          </tbody>
-        </table>
-      <h2>More to come</h2>
+      </table>
+      <br>
+      <p>
+        The graph below shows Uber's performance against NYC's top 4 taxi companies.
+      </p>
+      <br>
+      <img src="ubervsnyc.png" alt="Uber vs NYC Rides 2015-2021">
+      <br>
+      <p>
+        The graph below shows Uber's performance against NYC's Yellow Taxi company.
+      </p>
+      <br>
+      <img src="ubervsyt.png" alt="Uber vs YT Rides 2015-2021">
+      <br>
+      <br>
+      <h2>The Medallion Crisis</h2>
+      <p>
+        A taxi medallion is a permit that allows a taxicab driver to operate.  Since the creation of rideshare apps in 2011, NYC's taxi medallion's value has plummeted.
+        In 2014, yellow cab medallions were selling for $1 million because NYC's government inflated the medallion's value in an effort to increase revenue.
+        <i>However, they also capped the number of yellow cabs available to about 13,500.</i>  Rideshare vehicles had
+        no such limits and as a result, rideshare apps, particularly Uber, flooded the market, and virtually overnight, these taxi medallions became worthless. <br><br>
+
+        At the height of this madness, the average cab driver owed $600,000 in medallion debt, a nearly impossible sum to pay back as they worked in a dying industry.
+        As of November 2021, the New York Taxi Worker's Association announced a deal with Mayor Bill de Blasio for $65 million debt relief program, to cap driver's debt
+        to no more than $145,000 and maximum monthly payments of $800, in addition to the restitution of all foreclosed medallions to their owners. <br><br>
+
+        Rideshare apps, particularly Uber, are a problem and they must be regulated.
+      </p>
+      <br>
+      <br>
+      <h2>Ridership</h2>
+      <p>
+        Investopedia recently investigated Uber's prices and produced the table below.  It is difficult to understand
+        how these pricing structures work in real life but the overall takeaway is that taxis are cheaper in NYC when traffic
+        is flowing under 20 miles per hour whereas Uber is cheaper in other cases unless it is charging high-demand fares. <br><br>
+
+        A few other key takeaways include the following:
+        <ul>
+          <li> Uber and yellow taxis both charge fares based on a combination of time and distance. </li>
+          <li> Yellow taxis do not have surge pricing, but riders may have to wait longer for a taxi. </li>
+          <li> Unlike yellow taxis, Uber does not alter rates based on speed. </li>
+        </ul>
+        Please see Investopedia's chart below that provides a breakdown of Uber's fares. <br>
+      </p>
+      <table style="width:50%" border=2px>
+        <tr>
+          <th>TYPE</th>
+          <th>DESCRIPTION</th>
+          <th>BASE FARE</th>
+          <th>FINANCIAL BREAKDOWN</th>
+          <th>MINIMUM FARE</th>
+        </tr>
+        <tbody>
+          <tr>
+            <td>UberX</td>
+            <td>regular/professional drivers; regular cars</td>
+            <td>$2.55</td>
+            <td>$0.35 per minute + $1.75 per mile</td>
+            <td>$7.00</td>
+          </tr>
+          <tr>
+            <td>uberXL</td>
+            <td>regular/professional drivers; regular SUVs</td>
+            <td>$3.85</td>
+            <td>$0.50 per minute + $2.85 per mile</td>
+            <td>$10.50</td>
+          </tr>
+          <tr>
+            <td>UberBLACK</td>
+            <td>professional drivers; upscale cars</td>
+            <td>$7.00</td>
+            <td>$0.65 per minute + $3.75 per mile</td>
+            <td>$15.00</td>
+          </tr>
+          <tr>
+            <td>UberSUV</td>
+            <td>professional drivers; upscale SUVs</td>
+            <td>$14.00</td>
+            <td>$0.65 per minute + $3.75 per mile</td>
+            <td>$25.00</td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <h2>Uber's Lobbying</h2>
+      <p>
+        Uber has over 250 lobbyists and 49 lobbying firms in the United Sates alone.  Their lobbying force is bigger
+        than Google's, Facebook's, and Walmart's. So what exactly does Uber do with all of these lobbyists?  They
+        are attempting to maximize profits by <i>changing what is expected of transportation divers</i>.  For example: Uber currently under-insures
+        their drivers, they've reduced their rate of international taxes, refuse to service disabled passengers, and classify their
+        employees as independent contractors to avoid providing benefits and/or a union contract.  Please also note that Uber's "low prices"
+        are a result of tax avoidance and bad labor practices. <br><br>
+
+        Recently, Uber launched a $10 million dollar campaign against Mayor Bill de Blasio who proposed capping the number of Uber
+        vehicles in an effort to reduce congestion.  The outcome of that battle was that City Hall gets additional data about Uber's
+        trips. <br><br>
+
+        The message that Uber is sending is clear: they are a monopoly that has forced the Mayor of NYC to back down.  Uber is a problem and they must be regulated.
+      </p>
     </div>
 <!-- page # 3 -->
     <div id="code" class="tabcontent">
